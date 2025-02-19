@@ -10,10 +10,7 @@ WORKDIR /workspace
 
 # Install module dependencies
 COPY requirements.txt .
-RUN pip install --no-cache-dir -r requirements.txt
-
-# Create output directory
-RUN mkdir -p /outputs
+RUN pip install --no-cache-dir -r requirements.txt && mkdir -p /outputs
 
 # Copy source code
 COPY src /src
@@ -26,4 +23,4 @@ ENV HF_HOME=/models \
 TRANSFORMERS_OFFLINE=1
 
 # Set entrypoint
-ENTRYPOINT ["python", "/workspace/src/run_inference.py"]
+ENTRYPOINT ["python", "/src/run_inference.py"]
