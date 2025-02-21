@@ -45,7 +45,7 @@ def main():
     print("Starting inference...")
 
     input = os.environ.get("INPUT", "Default input value")
-    model_directory = os.environ.get("MODEL_DIRECTORY", "/models")
+    model_directory = "/app/models"
 
     output = {"input": input, "status": "error"}
 
