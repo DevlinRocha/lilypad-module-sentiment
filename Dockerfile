@@ -6,7 +6,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
   && rm -rf /var/lib/apt/lists/*
 
 # Set working directory
-WORKDIR /workspace
+WORKDIR /app
 
 # Install module dependencies
 COPY requirements.txt .
@@ -19,7 +19,7 @@ COPY src ./src
 COPY models ./models
 
 # Set environment variables
-ENV HF_HOME=/models \
+ENV HF_HOME=/app/models \
 TRANSFORMERS_OFFLINE=1
 
 # Set entrypoint

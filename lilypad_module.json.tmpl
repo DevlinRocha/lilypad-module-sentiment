@@ -9,7 +9,7 @@
     "Spec": {
       "Deal": { "Concurrency": 1 },
       "Docker": {
-        "WorkingDirectory": "/workspace",
+        "WorkingDirectory": "/app",
         "Entrypoint": ["python", "./src/run_inference.py"],
         "EnvironmentVariables": ["INPUT={{ js .input }}"],
         "Image": "devlinrocha/lilypad-module-sentiment:latest"
