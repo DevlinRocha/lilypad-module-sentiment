@@ -10,7 +10,7 @@
       "Deal": { "Concurrency": 1 },
       "Docker": {
         "WorkingDirectory": "/app",
-        "Entrypoint": ["python", "/app/src/run_inference.py"],
+        "Entrypoint": ["python", "/src/run_inference.py"],
         "EnvironmentVariables": ["INPUT={{ js .input }}"],
         "Image": "devlinrocha/lilypad-module-sentiment:latest"
       },
