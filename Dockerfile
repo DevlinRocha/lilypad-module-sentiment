@@ -23,4 +23,4 @@ ENV HF_HOME=/app/models \
 TRANSFORMERS_OFFLINE=1
 
 # Set entrypoint
-ENTRYPOINT ["python", "/src/run_inference.py"]
+ENTRYPOINT ["python", "/app/src/run_inference.py"]
